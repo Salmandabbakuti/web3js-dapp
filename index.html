@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chat in a Secure way-echat</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="band"></div>
+        <h2>e-chat</h2>
+        <div id="sections">
+            <!-- 3 sections. Your user profile, the messages of other users and the accounts that you can follow -->
+                     <section>
+                <h3 id="myProfile" onclick="ready.start()">My Profile</h3>
+                 <div id="profile-content" style="text-align: center;">
+                 	<span id="getName"></span>
+                  </br>
+                    <span id="getAddress"></span>
+                 </div>
+                 </br>
+                <center>
+                 <input type="text" id="name" placeholder="Enter Your Name.."> 
+                </center>
+               <center><button id="createAccount" onclick="ready.createAccount()">Save</button></center>
+                   </section>       
+             <section>
+                <h3 style="float:left;">Messages</h3>
+                <button onclick="ready.initMessages()"  id="refresh" style="float:right;">Refresh <i class="fa fa-refresh"></i></button>
+               </br>
+               </br>
+                <div id="messages"></div>
+                 <input type="text" id="address" placeholder="Enter Recipient Address..">
+                 <div style="text-align: center;">
+               <textarea id="write-message" rows="3" placeholder="Type Your Message.."></textarea>
+               <button onclick="ready.sendMessage()"><i class="fa fa-location-arrow" style="font-size:22px;"></i></button>
+              </div>
+              </section>
+            </div>
+        <div id="log" style="text-align: center; padding: 10yypx;"></div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"></script>
+
+        <script src="index.js"></script>
+    </body>
+    
+</html>
