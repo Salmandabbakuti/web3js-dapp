@@ -4,13 +4,14 @@ function addCredentials() {
       <button id="submit" class="align-center" onclick="ready()">Submit</button>`
       document.querySelector("#profile-content").innerHTML =userCredentials;
     }
+let nodeProvider= prompt("Please Enter Your Infura URL. We Never Store Your API keys and Valid for This Session Only.", "https://ropsten.infura.io/v3/");
     addCredentials();
     function ready(){
-let account= document.getElementById("userAddress").value;//prompt("Please Enter Your Account Address", "0x..");
-let key= document.getElementById("userKey").value;//prompt("Please enter Your PrivateKey Here. We Never Store Your Keys and valid for This Session Only.");
+let account= document.getElementById("userAddress").value;
+let key= document.getElementById("userKey").value;
 let privateKey1 = new ethereumjs.Buffer.Buffer(key, 'hex');
-//console.log(key);
-const provider = new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/<API key here"); // dont forget to add your API key
+//console.log(key)
+const provider = new Web3.providers.HttpProvider(nodeProvider); 
 const web3 = new Web3(provider);
 console.log(web3.version);
 const contract_Address = "0x88fc0739e42b7b3ff835d4cb654ae0740f3752b0";
