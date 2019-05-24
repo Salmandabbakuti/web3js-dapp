@@ -4,9 +4,10 @@ Using Web3js library to interact with smartcontracts and sending transactions fr
 
 As we already know, in order to do transactions on blockchain network, we must sign our message (whether offline or online) and broadcast on network. for ethereum clients like geth, mist, MEW, Metamask and ganache we dont need to sign manually. because they hold our private keys and sign our messages with our private key automatically.
 
-To interact with blockchain, we must be connected to any fully synced node. in this Dapp we are pointing to infura node.
+in this Dapp, we are not using any of those clients. with plain web3.js, we need to hold our own private keys and sign manually and broadcast on network. thats all we are gonna do.
 
-in this Dapp, we are not using any of these clients. with plain web3.js, we need to hold our own private keys and sign manually and broadcast on network. thats all we are gonna do.
+
+To interact with blockchain, we must be connected to any fully synced node. in this Dapp we are pointing to infura node.
 
 basically, this is a messenger like dapp where we can share text messages with anyone. once after creating account, you are able to send messages to anyone referring their Account address.
 
