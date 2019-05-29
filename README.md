@@ -1,4 +1,5 @@
 ## Web3.js Dapp
+This Repo illustrated on behalf of medium article. have a look at https://link.medium.com/XAk2B6iV3W for better understanding.
 
 Using Web3js library to interact with smartcontracts and sending transactions from remote node.
 
