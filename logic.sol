@@ -1,4 +1,4 @@
-pragma solidity ^0.5.4;
+pragma solidity ^0.5.9;
 
 contract chat {
     struct user {
@@ -37,4 +37,7 @@ contract chat {
     function messagesLength() public view returns(uint) {
         return userMessages[msg.sender].length;
          }
+    function userDetails() public view returns(string memory, address) {
+        return (users[msg.sender].name, users[msg.sender].addr);
+    }
 }
