@@ -27,7 +27,6 @@ contract chat {
                 }
     function writeMessage(address to, string memory _content) public {
         require(users[msg.sender].isCreated);
-        require(users[to].isCreated);
         
         Message memory message = Message(_content, msg.sender,users[msg.sender].name, now);
         userMessages[to].push(message);
