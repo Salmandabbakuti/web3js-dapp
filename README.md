@@ -1,16 +1,6 @@
 ## Web3.js Dapp
 This Repo illustrated on behalf of medium article. have a look at https://link.medium.com/XAk2B6iV3W for better understanding.
 
-Using Web3js library to interact with smartcontracts and sending transactions from remote node.
+Make sure You have infura Project Ropsten URL and Wallet Private Key.
 
-As we already know, in order to do transactions on blockchain network, we must sign our message (whether offline or online) and broadcast on network. for ethereum clients like geth, mist, MEW, Metamask and ganache we dont need to sign manually. because they hold our private keys and sign our messages with our private key automatically.
-
-in this Dapp, we are not using any of those clients. with plain web3.js, we need to hold our own private keys and sign manually and broadcast on network. thats all we are gonna do.
-
-
-To interact with blockchain, we must be connected to any fully synced node. in this Dapp we are pointing to infura node.
-
-basically, this is a messenger like dapp where we can share text messages with anyone. once after creating account, you are able to send messages to anyone referring their Account address.
-
-
-so, with Web3.js we can do all these operations. have a look at code
+Basically, this is a messenger like dapp where we can share text messages with anyone. once after creating account, you are able to send messages to anyone referring their Account address. So When you create account or sending message to Recipient address, it requires signing of your data with private key and it will be submitted  to the network.(whether account creation or Sending Message). signing of data and submitting transaction will be dne by plain web3.js without metamask or other clients. once miner verifies transaction, it will be reflected to you.
